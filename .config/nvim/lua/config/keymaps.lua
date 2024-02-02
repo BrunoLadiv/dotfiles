@@ -7,12 +7,18 @@ vim.keymap.set('x', 'ys', '<Plug>VSurround', { silent = true })
 --vscode keys
 if vim.g.vscode then
   vim.api.nvim_del_keymap('n', '<C-/>')
-
-  vim.keymap.set('n', '<C-j>', ':call VSCodeNotify("workbench.action.navigateDown")<CR>', { silent = true })
-  vim.keymap.set('x', '<C-j>', ':call VSCodeNotify("workbench.action.navigateDown")<CR>', { silent = true })
+  --visual and normal mode comments
   vim.keymap.set('n', '<C-/>', '<Plug>VSCodeCommentaryLinegv', { silent = true })
   vim.keymap.set('x', '<C-/>', '<Plug>VSCodeCommentarygv', { silent = true })
 
+  vim.keymap.set('n', '<C-j>', ':call VSCodeNotify("workbench.action.navigateDown")<CR>', { silent = true })
+  vim.keymap.set('x', '<C-j>', ':call VSCodeNotify("workbench.action.navigateDown")<CR>', { silent = true })
+
+  -- need to find a way for better line movement in vscode
+  -- vim.keymap.set('x', '<M-j>', ':call VSCodeNotify("editor.action.moveLinesDownAction")<CR>', { silent = true })
+  -- vim.keymap.set('x', '<M-k>', ':call VSCodeNotify("editor.action.moveLinesUpAction")<CR>', { silent = true })
+  -- vim.keymap.set('n', '<M-j>', ':call VSCodeNotify("editor.action.moveLinesDownAction")<CR>', { silent = true })
+  -- vim.keymap.set('n', '<M-k>', ':call VSCodeNotify("editor.action.moveLinesUpAction")<CR>', { silent = true })
   vim.keymap.set('n', '<C-k>', ':call VSCodeNotify("workbench.action.navigateUp")<CR>', { silent = true })
   vim.keymap.set('x', '<C-k>', ':call VSCodeNotify("workbench.action.navigateUp")<CR>', { silent = true })
 
