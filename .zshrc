@@ -20,5 +20,13 @@ alias ls="exa --icons"
 alias cat="bat --style=auto"
 #git bare dotfiles
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+#ctrl f to open fzf/tmux session
+bindkey -s ^f "tmux-sessionizer\n"
 
 export PATH="$HOME/.local/bin":$PATH
+export FLYCTL_INSTALL="/home/mirek/.fly"
+export PATH="$FLYCTL_INSTALL/bin:$PATH"
+export PATH=$PATH:/home/mirek/bin
+
+
+PATH=~/.console-ninja/.bin:$PATH
