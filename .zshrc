@@ -28,5 +28,7 @@ export FLYCTL_INSTALL="/home/mirek/.fly"
 export PATH="$FLYCTL_INSTALL/bin:$PATH"
 export PATH=$PATH:/home/mirek/bin
 
-
+#fzf and cd
+alias fcd='cd "$(find "$HOME" -type d | fzf)"'
+bindkey -s '^[f' 'cd "$(find "$HOME" -type d | fzf)"\n'
 PATH=~/.console-ninja/.bin:$PATH

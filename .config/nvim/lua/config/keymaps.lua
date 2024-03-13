@@ -30,6 +30,6 @@ if vim.g.vscode then
   --
   -- vim.keymap.set('n', '<C-w>_', ':<C-u>call VSCodeNotify("workbench.action.toggleEditorWidths")<CR>', { silent = true })
   --
-  -- vim.keymap.set('n', '<Space>', ':call VSCodeNotify("whichkey.show")<CR>', { silent = true })
-  -- vim.keymap.set('x', '<Space>', ':call VSCodeNotify("whichkey.show")<CR>', { silent = true })
+  vim.keymap.set("n", "<Space>", ':call VSCodeNotify("whichkey.show")<CR>', { silent = true })
+  vim.keymap.set("x", "<Space>", ':call VSCodeNotify("whichkey.show")<CR>', { silent = true })
 end
