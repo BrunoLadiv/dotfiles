@@ -3,13 +3,18 @@
 -- Add any additional keymaps here
 --
 vim.keymap.set("x", "ys", "<Plug>VSurround", { silent = true })
+--bind capital E and B to end and beggining of line
+vim.keymap.set("x", "E", "$", { silent = true })
+vim.keymap.set("x", "B", "0", { silent = true })
+vim.keymap.set("n", "E", "$", { silent = true })
+vim.keymap.set("n", "B", "0", { silent = true })
 
 --vscode keys
 if vim.g.vscode then
   vim.api.nvim_del_keymap("n", "<C-/>")
   --visual and normal mode comments
-  vim.keymap.set("n", "<C-/>", "<Plug>VSCodeCommentaryLinegv", { silent = true })
-  vim.keymap.set("x", "<C-/>", "<Plug>VSCodeCommentarygv", { silent = true })
+  vim.keymap.set("n", "gcc", "<Plug>VSCodeCommentaryLinegv", { silent = true })
+  vim.keymap.set("x", "gc", "<Plug>VSCodeCommentarygv", { silent = true })
 
   vim.keymap.set("n", "<C-j>", ':call VSCodeNotify("workbench.action.navigateDown")<CR>', { silent = true })
   vim.keymap.set("x", "<C-j>", ':call VSCodeNotify("workbench.action.navigateDown")<CR>', { silent = true })
