@@ -10,7 +10,7 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
+export EDITOR="nvim"
 export PATH=$HOME/.local/bin:$HOME/.cargo/bin:$PATH
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /opt/asdf-vm/asdf.sh
@@ -27,7 +27,8 @@ export PATH="$HOME/.local/bin":$PATH
 export FLYCTL_INSTALL="/home/mirek/.fly"
 export PATH="$FLYCTL_INSTALL/bin:$PATH"
 export PATH=$PATH:/home/mirek/bin
-
+#fzf ripgrep
+alias f="fzf-ripgrep"
 #fzf and cd
 alias fcd='cd "$(find "$HOME" -type d | fzf)"'
 bindkey -s '^[f' 'cd "$(find "$HOME" -type d | fzf)"\n'
