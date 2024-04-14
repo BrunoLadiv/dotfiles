@@ -13,11 +13,13 @@ vim.keymap.set("n", "B", "0", { silent = true })
 if vim.g.vscode then
   vim.api.nvim_del_keymap("n", "<C-/>")
   --visual and normal mode comments
-  vim.keymap.set("n", "gcc", "<Plug>VSCodeCommentaryLinegv", { silent = true })
-  vim.keymap.set("x", "gc", "<Plug>VSCodeCommentarygv", { silent = true })
+  vim.keymap.set("n", "gcc", "<Plug>VSCodeCommentaryLine", { silent = true })
+  vim.keymap.set("x", "gc", "<Plug>VSCodeCommentary", { silent = true })
 
   vim.keymap.set("n", "<C-j>", ':call VSCodeNotify("workbench.action.navigateDown")<CR>', { silent = true })
   vim.keymap.set("x", "<C-j>", ':call VSCodeNotify("workbench.action.navigateDown")<CR>', { silent = true })
+  -- vim.keymap.set("n", "za", ':call VSCodeNotify("editor.toggleFold")<CR>', { silent = true })
+  -- vim.keymap.set("x", "za", ':call VSCodeNotify("editor.toggleFold")<CR>', { silent = true })
 
   -- need to find a way for better line movement in vscode
   -- vim.keymap.set('x', '<M-j>', ':call VSCodeNotify("editor.action.moveLinesDownAction")<CR>', { silent = true })
